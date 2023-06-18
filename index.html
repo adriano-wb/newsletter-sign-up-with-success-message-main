@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+		<title>Frontend Mentor | Newsletter sign-up form with success message</title>
+		<link rel="stylesheet" href="assets/css/estilo.css">
+	</head>
+	<body>
+		<main class="container">
+			<div class="modal" id="form">
+				<!-- Parte do conteúdo da seção -->
+				<section class="modal-sec">
+					<h1 class="modal-sec__title">Stay updated!</h1>
+					<p class="modal-sec__text">Join 60,000+ product managers receiving monthly updates on:</p>
+					<ul class="list-check">
+						<li class="list-check__item"><img src="assets/images/icon-list.svg" class="list-check__img" alt=""><p class="list-check__text">Product discovery and building what matters</p></li>
+						<li class="list-check__item"><img src="assets/images/icon-list.svg" class="list-check__img" alt=""><p class="list-check__text">Measuring to ensure updates are a success</p></li>
+						<li class="list-check__item"><img src="assets/images/icon-list.svg" class="list-check__img" alt=""><p class="list-check__text">And much more!</p></li>
+					</ul>
+					<form class="modal-form">
+						<label for="email" class="modal-form__label">Email address <span id="errorStatus">Valid required email</span></label>
+						<input type="email" class="modal-form__input" id="email" name="E-mail" placeholder="email@company.com">
+						<button type="submit" class="modal-form__button">Subscribe to monthly newsletter</button>
+					</form>
+				</section>
+				<!-- Fim parte do conteúdo da seção -->
+				
+				<!-- Parte do lado (imagem) -->
+				<aside class="modal-side">
+					<picture class="modal-picture">
+						<source srcset="assets/images/illustration-sign-up-mobile.svg" media="(max-width:600px)">
+						<img class="modal-picture__img" src="assets/images/illustration-sign-up-desktop.svg" alt="">
+					</picture>
+				</aside>
+				<!-- Fim parte do lado -->
+			</div>
+			
+			<!-- Parte do agradecimento -->
+			
+			<!-- This would be returned from a web server, but since I only used the front end
+treat this as an illustration only -->
+			<div class="modal modal-tks" id="tks">
+				<section class="modal-sec msg-tks-sec">
+					<img src="assets/images/icon-success.svg" class="modal-sec__icon" alt="">
+					<h1 class="modal-sec__title msg-tks-sec__title">Thanks for subscribing!</h1>
+				
+					<!-- Mensagem de concluído início -->
+					<p class="modal-sec__text">A confirmation email has been sent to <b>ash@loremcompany.com</b>. 
+				Please open it and click the button inside to confirm your subscription.</p>
+					<!-- Mensagem de concluído final -->
+					
+					<button type="button" class="modal-form__button msg-tks-sec__button">Dismiss message</button>
+				</section>
+			</div>
+		</main>
+		
+		<footer class="attribution">
+			<p class="attribution__text">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+			Coded by <a href="#">Adriano</a>.</p>
+		</footer>
+		
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>

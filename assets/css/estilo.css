@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+	border: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+:root {
+	/* Primary */
+	--tomato: hsl(4, 100%, 67%);
+
+	/* Neutral */
+	--darkSlateGrey: hsl(234, 29%, 20%);
+	--charcoalGrey: hsl(235, 18%, 26%);
+	--grey: hsl(231, 7%, 60%);
+	--white: hsl(0, 0%, 100%);
+}
+
+.modal {
+	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.animation-opacity-off {
+	animation: .4s fadeOut linear forwards;
+}
+
+/* Parte central <section class="modal-sec"> */
+.modal-sec {
+	padding: 31px 24px;
+	order: 1;
+}
+
+.modal-sec__title,
+.modal-sec__text {
+	color: var(--darkSlateGrey);
+}
+
+.modal-sec__title {
+	font-size: 2.5rem;
+	padding-bottom: 22px;
+}
+
+.modal-sec__text {
+	line-height: 1.5;
+	padding-bottom: 22px;
+}
+
+.list-check {
+	list-style: none;
+}
+
+.list-check__item {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 9px;
+}
+
+.list-check__img {
+	margin-top: 2px;
+}
+
+.list-check__text {
+	line-height: 1.5;
+	margin-left: 16px;
+	margin-top: 1px;
+}
+
+/* Formulário para envio de e-mail */
+.modal-form {
+	margin-top: 38px;
+}
+
+.modal-form__label {
+	color: var(--darkSlateGrey);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+
+#errorStatus {
+	animation: fadeOut .2s linear;
+	display: none;
+	color: var(--tomato);
+	font-size: 0.75rem;
+}
+
+.modal-form__input,
+.modal-form__button {
+	border-radius: 7px;
+}
+
+.modal-form__input {
+	margin-top: 9px;
+	padding: 17px 22px;
+	background: transparent;
+	border: 1px solid var(--grey);
+	width: 100%;
+}
+
+.modal-form__input--err {
+	animation: fadeOut .2s linear;
+	border: 1px solid var(--tomato);
+	background-color: rgb(255, 232, 230);
+	color: var(--tomate);
+}
+
+.modal-form__button {
+	background-color: var(--darkSlateGrey);
+	color: var(--white);
+	cursor: pointer;
+	padding: 20px 22px;
+	padding-bottom: 17px;
+	margin-top: 24px;
+	font-weight: bold;
+	transition: 0.2s;
+	width: 100%;
+}
+	
+.modal-form__button:hover {
+	background-image: linear-gradient(to right, hsl(349, 100%, 64%), hsl(19, 100%, 56%));
+	box-shadow: 1px 1px 5px hsl(4, 100%, 83%), 1px 17px 15px hsla(4, 100%, 87%, 0.5);
+}
+
+/* lado imagem */
+.modal-picture__img {
+	width: 100%;
+}
+
+/* Rodapé */
+.attribution { 
+	background-color: var(--tomato);
+	color: var(--white);
+	text-align: center;
+	padding: 7px 0;
+}
+
+.attribution__text {
+	font-size: 0.75rem;
+}
+
+.attribution a { 
+	color: var(--charcoalGrey);
+	text-decoration: none;
+}
+
+@media only screen and (min-height: 864px) {
+	.attribution {		
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+/* Página de envio sucedido */
+.modal-tks {
+	animation: .4s fadeIn linear forwards;
+	display: none;
+}
+
+.msg-tks-sec {
+	padding: 149px 24px;
+}
+
+.modal-sec__icon {
+	margin-bottom: 35px;
+}
+
+.msg-tks-sec__title {
+	line-height: 1;
+	margin-bottom: 4px;
+}
+
+.msg-tks-sec__button {
+	margin-top: 238px;
+}
+
+/* Versão desktop */
+@media only screen and (min-width: 600px) {
+	body {
+		background-color: var(--charcoalGrey);
+	}
+	
+	.modal-side {
+		order: 1;
+	}
+	
+	.container {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.modal {
+		background-color: var(--white);
+		flex-direction: row;
+		border-radius: 40px;
+		border: 1px solid #ccc;
+		padding: 22px;
+		width: 930px;
+	}
+	
+	.modal-sec {
+		margin: 36px;
+		margin-left: 18px;
+		margin-right: 42px;
+	}
+	
+	.modal-sec__title {
+		font-size: 3.5rem;
+	}
+
+	/* lado imagem */
+	.modal-picture__img {
+		width: auto;
+	}
+	
+	.attribution {
+		bottom: -34px;
+	}
+	
+	.modal-tks {
+		width: 505px;
+	}
+	
+	.msg-tks-sec {
+		padding: 31px 42px;
+		margin: 0;
+	}
+	
+	.msg-tks-sec__button {
+		margin-top: 18px;
+		margin-bottom: 8px;
+	}
+}
+
+@keyframes fadeOut {
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}

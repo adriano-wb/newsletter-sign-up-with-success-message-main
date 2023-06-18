@@ -1,0 +1,29 @@
+
+const inputEmail = document.getElementById("email");
+const errorMsg = document.getElementById("errorStatus");
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const btnEnvio = document.querySelector(".modal-form");
+const exibirSecForm = document.getElementById("form");
+const exibirSecTks = document.getElementById("tks");
+
+// Validação de input 
+function validarForm(evt) {
+	evt.preventDefault();
+	const emailVal = inputEmail.value;
+	console.log("test");
+	// Verifica se o e-mail corresponde ao formato
+	if (!regex.test(emailVal) || !emailVal) {
+		inputEmail.classList.add("modal-form__input--err");
+		errorMsg.style.display = "block";
+	} else {
+		inputEmail.classList.remove("modal-form__input--err");
+		errorMsg.style.display = "none";
+		exibirSecForm.classList.add("animation-opacity-off");
+		exibirSecForm.addEventListener("animationend", () => {
+			exibirSecForm.style.display = "none";
+			exibirSecTks.style.display = "block";
+		});
+	}
+}
+
+btnEnvio.addEventListener("submit", (event) => validarForm(event), false);
