@@ -5,6 +5,7 @@ const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const btnEnvio = document.querySelector(".modal-form");
 const exibirSecForm = document.getElementById("form");
 const exibirSecTks = document.getElementById("tks");
+const emailTxt = document.getElementById("emailRequest");
 
 // Validação de input 
 function validarForm(evt) {
@@ -23,6 +24,7 @@ function validarForm(evt) {
 			exibirSecForm.style.display = "none";
 			exibirSecTks.style.display = "block";
 		});
+		emailTxt.textContent = emailVal;
 	}
 }
 
