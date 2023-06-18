@@ -11,7 +11,6 @@ const emailTxt = document.getElementById("emailRequest");
 function validarForm(evt) {
 	evt.preventDefault();
 	const emailVal = inputEmail.value;
-	console.log("test");
 	// Verifica se o e-mail corresponde ao formato
 	if (!regex.test(emailVal) || !emailVal) {
 		inputEmail.classList.add("modal-form__input--err");
@@ -24,7 +23,7 @@ function validarForm(evt) {
 			exibirSecForm.style.display = "none";
 			exibirSecTks.style.display = "block";
 		});
-		emailTxt.textContent = emailVal;
+		emailVal.textContent = emailVal;
 	}
 }
 
