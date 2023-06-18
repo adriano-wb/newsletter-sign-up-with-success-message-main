@@ -1,11 +1,11 @@
 
 const inputEmail = document.getElementById("email");
 const errorMsg = document.getElementById("errorStatus");
-const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const btnEnvio = document.querySelector(".modal-form");
 const exibirSecForm = document.getElementById("form");
 const exibirSecTks = document.getElementById("tks");
 const emailTxt = document.getElementById("emailRequest");
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Validação de input 
 function validarForm(evt) {
