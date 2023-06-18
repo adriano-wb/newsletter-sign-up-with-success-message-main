@@ -23,7 +23,7 @@ function validarForm(evt) {
 			exibirSecForm.style.display = "none";
 			exibirSecTks.style.display = "block";
 		});
-		emailVal.textContent = emailVal;
+		emailTxt.textContent = emailVal;
 	}
 }
 
